@@ -3,36 +3,23 @@ package controllers;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import constants.Constants;
 import constants.Messages;
-import models.Craft;
+import models.User;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
 import java.util.List;
 
-public class Crafts extends Controller {
+public class Users extends Controller {
 
     public Result index() {
-        return ok(views.html.crafts.render());
+        return ok(views.html.users.render());
     }
 
     public Result findAll() {
         ObjectNode result = Json.newObject();
         try {
-            List<Craft> list = Craft.findAll();
-            result.put(Constants.CODE, Constants.SUCCESS);
-            result.replace(Constants.DATAS, Json.toJson(list));
-        } catch (Exception e) {
-            result.put(Constants.CODE, Constants.ERROR);
-            result.put(Constants.MESSAGE, Messages.QUERY_ERROR);
-        }
-        return ok(result);
-    }
-
-    public Result findForPublic() {
-        ObjectNode result = Json.newObject();
-        try {
-            List<Craft> list = Craft.findForPublic();
+            List<User> list = User.findAll();
             result.put(Constants.CODE, Constants.SUCCESS);
             result.replace(Constants.DATAS, Json.toJson(list));
         } catch (Exception e) {

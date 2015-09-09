@@ -1,20 +1,20 @@
-@main(title = "Auction Management") {
-    <script type="text/javascript" src="@routes.Assets.at("app/crafts.js")"></script>
+@main(title = "User Management") {
+    <script type="text/javascript" src="@routes.Assets.at("app/users.js")"></script>
 } {
     <section id="page-title">
         <div class="container clearfix">
-            <h1>Auction Management</h1>
-            <span>Craft List</span>
+            <h1>User Management</h1>
+            <span>User List</span>
             <ol class="breadcrumb">
                 <li><a href="/">Home</a></li>
-                <li class="active">Craft List</li>
+                <li class="active">User List</li>
             </ol>
         </div>
     </section>
 } {
     <!-- Content
             ============================================= -->
-    <section id="content" ng-controller="Craft">
+    <section id="content" ng-controller="User">
         <div class="content-wrap">
             <div class="container clearfix">
                 <div class="table-responsive bottommargin">
@@ -22,9 +22,9 @@
                         <thead>
                             <tr>
                                 <th class="cart-product-remove">&nbsp;</th>
-                                <th class="cart-product-thumbnail">&nbsp;</th>
-                                <th class="cart-product-name">Product</th>
-                                <th class="cart-product-price">Unit Price</th>
+                                <th class="cart-product-name">Username</th>
+                                <th class="cart-product-price">Email</th>
+                                <th class="cart-product-price">User Type</th>
                                 <th class="cart-product-quantity">Status</th>
                             </tr>
                         </thead>
@@ -33,14 +33,14 @@
                                 <td class="cart-product-remove">
                                     <a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>
                                 </td>
-                                <td class="cart-product-thumbnail">
-                                    <a href="#"><img width="64" height="64" src="@routes.Assets.at("upload")/dress-3.jpg" alt="Pink Printed Dress"></a>
-                                </td>
                                 <td class="cart-product-name">
-                                    <a href="#">{{ obj.name }}</a>
+                                    <a href="#">{{ obj.username }}</a>
                                 </td>
                                 <td class="cart-product-price">
-                                    <span class="amount">${{ obj.price }}</span>
+                                    <span class="amount">{{ obj.email }}</span>
+                                </td>
+                                <td class="cart-product-price">
+                                    <span class="amount">{{ obj.userType }}</span>
                                 </td>
                                 <td class="cart-product-quantity">
                                     <span class="amount {{ getStatusClass(obj.status) }}">{{ getStatusText(obj.status) }}</span>

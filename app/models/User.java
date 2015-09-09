@@ -54,6 +54,10 @@ public class User {
         return null;
     }
 
+    public static List<User> findAll() {
+        return Ebean.find(User.class).select("id, username, email, userType, status").where().findList();
+    }
+
     public Long getId() {
         return id;
     }

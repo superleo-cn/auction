@@ -3,10 +3,14 @@
 # ~~~~
 
 # Home page
-GET        /               @controllers.Application.index()
-GET        /findAll        @controllers.Crafts.findAll()
-GET        /crafts         @controllers.Crafts.index()
+GET        /                            @controllers.Application.index()
+GET        /crafts/findAll              @controllers.Crafts.findAll()
+GET        /crafts/findForPublic        @controllers.Crafts.findForPublic()
+GET        /crafts                      @controllers.Crafts.index()
+
+GET        /users/findAll               @controllers.Users.findAll()
+GET        /users                       @controllers.Users.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /*file          @controllers.Assets.at(path="/public", file)
+GET        /*file                       @controllers.Assets.at(path="/public", file)
 

@@ -42,8 +42,12 @@ public class Craft {
 
 
     /* the following are service methods */
-    public static List<Craft> findAll() {
+    public static List<Craft> findForPublic() {
         return Ebean.find(Craft.class).select("id, name, tag, pirce").where().eq("status", true).findList();
+    }
+
+    public static List<Craft> findAll() {
+        return Ebean.find(Craft.class).select("id, name, tag, pirce").where().findList();
     }
 
     public Long getId() {

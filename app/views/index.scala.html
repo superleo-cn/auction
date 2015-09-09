@@ -20,8 +20,8 @@
                 <div id="shop" class="clearfix">
                     <div class="product clearfix" ng-repeat="obj in data">
                         <div class="product-image">
-                            <a href="#"><img src="@routes.Assets.at("upload")/{{ obj.pic1 }}" alt="Checked Short Dress"></a>
-                            <a href="#"><img src="@routes.Assets.at("upload")/{{ obj.pic2 }}" alt="Checked Short Dress"></a>
+                            <a href="#"><img ng-src="@routes.Assets.at("upload")/{{ obj.pic1 }}" alt="Checked Short Dress"></a>
+                            <a href="#"><img ng-src="@routes.Assets.at("upload")/{{ obj.pic2 }}" alt="Checked Short Dress"></a>
                             <div class="product-overlay">
                                 <a href="#" class="add-to-cart"><i class="icon-shopping-cart"></i><span> Bid</span></a>
                                 <a href="include/ajax/shop-item.html" class="item-quick-view" data-lightbox="ajax"><i class="icon-zoom-in2"></i><span> Quick View</span></a>

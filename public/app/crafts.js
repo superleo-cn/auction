@@ -1,4 +1,4 @@
-webApp.controller('Auction', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
+webApp.controller('Craft', ['$scope', '$rootScope', '$http', function ($scope, $rootScope, $http) {
     $scope.method = 'GET';
     $scope.data = {};
     $scope.params = {};
@@ -37,7 +37,7 @@ webApp.controller('Auction', ['$scope', '$rootScope', '$http', function ($scope,
         if (data && data.code == '1') {
             $scope.data = data.datas;
         }
-    }, "/crafts/findForPublic");
+    }, "/crafts/findAll");
 
 }]);
 $(function () {
