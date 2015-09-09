@@ -1,4 +1,4 @@
-@(title: String)(scripts: Html)(content: Html)
+@(title: String)(scripts: Html)(pagesTitle: Html)(content: Html)
 <!DOCTYPE html>
 
 <html lang="en-US" ng-app="webApp">
@@ -41,11 +41,8 @@
             <!-- Header
             ============================================= -->
             <header id="header" class="full-header">
-
                 <div id="header-wrap">
-
                     <div class="container clearfix">
-
                         <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
                         <!-- Logo
@@ -60,7 +57,7 @@
                         <nav id="primary-menu">
                             <ul>
                                 <li><a href="/"><div>Home</div></a></li>
-                                <li><a href="/"><div>Auction Management</div></a></li>
+                                <li><a href="/crafts"><div>Auction Management</div></a></li>
                                 <li><a href="javascript:void(0)"><div>User Management</div></a>
                                     <ul>
                                         <li><a href="#"><div><i class="icon-stack"></i>Sliders</div></a>
@@ -135,16 +132,8 @@
 
             <!-- Page Title
             ============================================= -->
-            <section id="page-title">
-                <div class="container clearfix">
-                    <h1>Auction</h1>
-                    <span>Start Buying your Favourite Crafts</span>
-                    <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li class="active">Crafts</li>
-                    </ol>
-                </div>
-            </section><!-- #page-title end -->
+            @pagesTitle
+            <!-- #page-title end -->
 
             <!-- Content
             ============================================= -->

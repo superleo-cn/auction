@@ -4,8 +4,9 @@
 
 # Home page
 GET        /               @controllers.Application.index()
-GET        /findAll        @controllers.Auctions.findAll()
+GET        /findAll        @controllers.Crafts.findAll()
+GET        /crafts         @controllers.Crafts.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /*file        @controllers.Assets.at(path="/public", file)
+GET        /*file          @controllers.Assets.at(path="/public", file)
 

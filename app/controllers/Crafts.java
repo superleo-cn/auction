@@ -10,7 +10,11 @@ import play.mvc.Result;
 
 import java.util.List;
 
-public class Auctions extends Controller {
+public class Crafts extends Controller {
+
+    public Result index() {
+        return ok(views.html.crafts.render());
+    }
 
     public Result findAll() {
         ObjectNode result = Json.newObject();

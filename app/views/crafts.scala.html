@@ -1,0 +1,148 @@
+@main(title = "Auction Management") {
+    <script type="text/javascript" src="@routes.Assets.at("app/auctions.js")"></script>
+} {
+    <section id="page-title">
+        <div class="container clearfix">
+            <h1>Auction Management</h1>
+            <span>Start Buying your Favourite Crafts</span>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li class="active">Crafts List</li>
+            </ol>
+        </div>
+    </section>
+} {
+    <!-- Content
+            ============================================= -->
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <div class="table-responsive bottommargin">
+                    <table class="table cart">
+                        <thead>
+                            <tr>
+                                <th class="cart-product-remove">&nbsp;</th>
+                                <th class="cart-product-thumbnail">&nbsp;</th>
+                                <th class="cart-product-name">Product</th>
+                                <th class="cart-product-price">Unit Price</th>
+                                <th class="cart-product-quantity">Quantity</th>
+                                <th class="cart-product-subtotal">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cart_item">
+                                <td class="cart-product-remove">
+                                    <a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>
+                                </td>
+                                <td class="cart-product-thumbnail">
+                                    <a href="#"><img width="64" height="64" src="@routes.Assets.at("upload")/dress-3.jpg" alt="Pink Printed Dress"></a>
+                                </td>
+                                <td class="cart-product-name">
+                                    <a href="#">Pink Printed Dress</a>
+                                </td>
+                                <td class="cart-product-price">
+                                    <span class="amount">$19.99</span>
+                                </td>
+                                <td class="cart-product-quantity">
+                                    <div class="quantity clearfix">
+                                        <input type="button" value="-" class="minus">
+                                        <input type="text" name="quantity" value="2" class="qty">
+                                        <input type="button" value="+" class="plus">
+                                    </div>
+                                </td>
+                                <td class="cart-product-subtotal">
+                                    <span class="amount">$39.98</span>
+                                </td>
+                            </tr>
+                            <tr class="cart_item">
+                                <td class="cart-product-remove">
+                                    <a href="#" class="remove" title="Remove this item"><i class="icon-trash2"></i></a>
+                                </td>
+                                <td class="cart-product-thumbnail">
+                                    <a href="#"><img width="64" height="64" src="@routes.Assets.at("upload")/shoes-2.jpg" alt="Checked Canvas Shoes"></a>
+                                </td>
+                                <td class="cart-product-name">
+                                    <a href="#">Checked Canvas Shoes</a>
+                                </td>
+                                <td class="cart-product-price">
+                                    <span class="amount">$24.99</span>
+                                </td>
+                                <td class="cart-product-quantity">
+                                    <div class="quantity clearfix">
+                                        <input type="button" value="-" class="minus">
+                                        <input type="text" name="quantity" value="1" class="qty">
+                                        <input type="button" value="+" class="plus">
+                                    </div>
+                                </td>
+                                <td class="cart-product-subtotal">
+                                    <span class="amount">$24.99</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-md-6 clearfix">
+                        <h4>Calculate Shipping</h4>
+                        <form>
+                            <div class="col_full">
+                                <select class="sm-form-control">
+                                    <option value="AF">Afghanistan</option>
+                                    <option value="AL">Albania</option>
+                                </select>
+                            </div>
+                            <div class="col_half">
+                                <input type="text" class="sm-form-control" placeholder="State / Country">
+                            </div>
+
+                            <div class="col_half col_last">
+                                <input type="text" class="sm-form-control" placeholder="PostCode / Zip">
+                            </div>
+                            <a href="#" class="button button-3d nomargin button-black">Update Totals</a>
+                        </form>
+                    </div>
+
+                    <div class="col-md-6 clearfix">
+                        <div class="table-responsive">
+                            <h4>Cart Totals</h4>
+
+                            <table class="table cart">
+                                <tbody>
+                                    <tr class="cart_item">
+                                        <td class="cart-product-name">
+                                            <strong>Cart Subtotal</strong>
+                                        </td>
+
+                                        <td class="cart-product-name">
+                                            <span class="amount">$106.94</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="cart_item">
+                                        <td class="cart-product-name">
+                                            <strong>Shipping</strong>
+                                        </td>
+
+                                        <td class="cart-product-name">
+                                            <span class="amount">Free Delivery</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="cart_item">
+                                        <td class="cart-product-name">
+                                            <strong>Total</strong>
+                                        </td>
+
+                                        <td class="cart-product-name">
+                                            <span class="amount color lead"><strong>$106.94</strong></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+}
